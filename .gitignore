@@ -1,0 +1,40 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables / secrets
+.env
+.env.*
+*.key
+
+# Hugging Face / model caches
+.cache/
+huggingface/
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.pt
+models/**/*.pth
+
+# Training checkpoints
+checkpoints/
+outputs/
+wandb/
+
+# Large temporary files
+*.log
+*.tmp
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local trained model artifacts
+models/quant-qwen-lora/

@@ -1,0 +1,19 @@
+A robust quantitative backtest must avoid look-ahead bias. Information used at time t must have been available at time t.
+
+Transaction costs can materially reduce the profitability of high-turnover strategies.
+
+Out-of-sample testing is necessary because a strategy that performs well in-sample may be overfit.
+
+Multiple hypothesis testing can make weak strategies appear statistically significant by chance.
+
+A quantitative researcher should distinguish correlation from causation and identify possible confounding variables.
+
+Portfolio evaluation should consider return, volatility, drawdown, Sharpe ratio, turnover, and transaction costs.
+
+A valid factor test should define the signal, investment universe, rebalance timing, benchmark, and evaluation period before examining results.
+
+Point-in-time financial data should be used to avoid accidentally using future revisions.
+
+Statistical significance does not guarantee economic significance.
+
+A trading strategy should be evaluated across different market regimes and unseen time periods.
