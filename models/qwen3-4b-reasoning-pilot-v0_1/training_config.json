@@ -1,0 +1,45 @@
+{
+  "base_model": "Qwen/Qwen3-4B-Base",
+  "dataset": "training/reasoning/data/reasoning_pilot_v0_1_sft.jsonl",
+  "expected_examples": 100,
+  "experiment": "reasoning-pilot-v0.1",
+  "lora": {
+    "bias": "none",
+    "lora_alpha": 16,
+    "lora_dropout": 0.1,
+    "r": 8,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "task_type": "CAUSAL_LM"
+  },
+  "quantization": {
+    "bnb_4bit_compute_dtype": "torch.bfloat16",
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "load_in_4bit": true
+  },
+  "training": {
+    "bf16": true,
+    "completion_only_loss": true,
+    "effective_batch_size": 4,
+    "fp16": false,
+    "gradient_accumulation_steps": 4,
+    "gradient_checkpointing": true,
+    "learning_rate": 5e-05,
+    "lr_scheduler_type": "linear",
+    "max_grad_norm": 1.0,
+    "max_length": 1024,
+    "num_train_epochs": 2,
+    "optim": "adamw_torch",
+    "packing": false,
+    "per_device_train_batch_size": 1,
+    "report_to": "none",
+    "seed": 42,
+    "warmup_steps": 5,
+    "weight_decay": 0.01
+  }
+}
